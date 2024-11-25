@@ -18,4 +18,5 @@ type Config struct {
 	Worker struct {
 		ApiKey string
 	}
+	PostgresDSNDanmuAuthDB string
 }

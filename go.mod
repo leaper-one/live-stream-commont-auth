@@ -6,15 +6,22 @@ require (
 	github.com/Akegarasu/blivedm-go v1.3.0
 	github.com/glebarez/sqlite v1.8.0 // indirect
 	github.com/go-resty/resty/v2 v2.7.0
-	github.com/leaper-one/pkg v0.0.5
+	github.com/leaper-one/pkg v0.0.6
 	github.com/sirupsen/logrus v1.9.0
 	github.com/zeromicro/go-zero v1.5.2
-	gorm.io/gorm v1.24.6
+	gorm.io/gorm v1.25.0
 )
 
 require github.com/gofrs/uuid v4.2.0+incompatible
 
-require github.com/dustin/go-humanize v1.0.1 // indirect
+require (
+	github.com/dustin/go-humanize v1.0.1 // indirect
+	github.com/jackc/pgpassfile v1.0.0 // indirect
+	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect
+	github.com/jackc/pgx/v5 v5.3.1 // indirect
+	golang.org/x/crypto v0.8.0 // indirect
+	gorm.io/driver/postgres v1.5.2 // indirect
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect

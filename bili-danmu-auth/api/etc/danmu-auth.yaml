@@ -18,3 +18,5 @@ Auth:
 
 Worker:
   ApiKey: IAMAWORKER
+
+PostgresDSNDanmuAuthDB: host=postgres user=leaperone password=password dbname=danmuauth_db port=5432 sslmode=disable TimeZone=Asia/Shanghai

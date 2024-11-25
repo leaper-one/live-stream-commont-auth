@@ -24,10 +24,14 @@ var (
 )
 
 func NewServiceContext(c config.Config, db_path *string) *ServiceContext {
-	db, _ := pkg_db.InitSQLiteDB(*db_path, &core.DanmuAuth{}, &core.Balance{}, &core.AccessKey{})
+	// db, _ := pkg_db.InitSQLiteDB(*db_path, &core.DanmuAuth{}, &core.Balance{}, &core.AccessKey{})
 	// db, err := gorm.Open(sqlite.Open("file::memory:?cache=shared"), &gorm.Config{})
 
 	// 1 second in nanoseconds
+	db, err := pkg_db.InitPostgresDB(c.PostgresDSNDanmuAuthDB, &core.DanmuAuth{}, &core.Balance{}, &core.AccessKey{})
+	if err != nil {
+		panic(err)
+	}
 
 	// init SlidingWindowLimiter
 	limiter, err := limiter.NewSlidingWindowLimiter(500, 60*second, 1)
